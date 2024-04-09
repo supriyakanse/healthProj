@@ -1,0 +1,61 @@
+.enquiry-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .enquiry-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .enquiry-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .error {
+    color: red;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  
+  .enquiry-form input[type="text"],
+  .enquiry-form input[type="email"],
+  .enquiry-form input[type="tel"],
+  .enquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .enquiry-form textarea {
+    height: 100px;
+  }
+  
+  .enquiry-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .enquiry-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

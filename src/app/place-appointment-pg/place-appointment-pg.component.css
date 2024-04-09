@@ -1,0 +1,51 @@
+/* Style for form container */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for labels */
+  label {
+    display: inline-block;
+    width: 120px; /* Adjust width as needed */
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  /* Style for input fields */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="radio"] {
+    width: calc(100% - 130px); /* Adjust width as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for error messages */
+  span.error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Style for submit button */
+  button[type="submit"] {
+    margin-left: 130px; /* Match label width */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,105 @@
+<app-header-pg></app-header-pg>
+
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+<input #nameInput type="text" formControlName="name" autofocus>
+<div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched">
+    <span *ngIf="appointmentForm.get('name')?.errors?.['required']">Name is required.</span>
+</div>
+
+  
+
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email">
+    <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched">
+        <span *ngIf="appointmentForm.get('email')?.errors?.['required']">Email is required.</span>
+        <span *ngIf="appointmentForm.get('email')?.errors?.['email']">Invalid email format.</span>
+        
+    </div>
+
+    <label for="age">Age:</label>
+    <input type="number" formControlName="age">
+    <div *ngIf="appointmentForm.get('age')?.invalid && appointmentForm.get('age')?.touched">
+        <span *ngIf="appointmentForm.get('age')?.errors?.['required']">Age is required.</span>
+    </div>
+
+    <label for="mobileNo">Mobile Number:</label>
+    <input type="tel" formControlName="mobileNo">
+    <div *ngIf="appointmentForm.get('mobileNo')?.invalid && appointmentForm.get('mobileNo')?.touched">
+        <span *ngIf="appointmentForm.get('mobileNo')?.errors?.['required']">Mobile number is required.</span>
+      
+    </div>
+
+    <label for="addressLine1">Address Line 1:</label>
+    <input type="text" formControlName="addressLine1">
+    <div *ngIf="appointmentForm.get('addressLine1')?.invalid && appointmentForm.get('addressLine1')?.touched">
+        <span *ngIf="appointmentForm.get('addressLine1')?.errors?.['required']">Address Line 1 is required.</span>
+    </div>
+
+    <label for="addressLine2">Address Line 2:</label>
+    <input type="text" formControlName="addressLine2">
+
+    <label for="city">City:</label>
+    <input type="text" formControlName="city">
+    <div *ngIf="appointmentForm.get('city')?.invalid && appointmentForm.get('city')?.touched">
+        <span *ngIf="appointmentForm.get('city')?.errors?.['required']">City is required.</span>
+    </div>
+
+    <label for="country">Country:</label>
+    <input type="text" formControlName="country">
+    <div *ngIf="appointmentForm.get('country')?.invalid && appointmentForm.get('country')?.touched">
+        <span *ngIf="appointmentForm.get('country')?.errors?.['required']">Country is required.</span>
+    </div>
+
+    <label for="state">State:</label>
+    <input type="text" formControlName="state">
+    <div *ngIf="appointmentForm.get('state')?.invalid && appointmentForm.get('state')?.touched">
+        <span *ngIf="appointmentForm.get('state')?.errors?.['required']">State is required.</span>
+    </div>
+
+    <label for="pinCode">Pin Code:</label>
+    <input type="text" formControlName="pinCode">
+    <div *ngIf="appointmentForm.get('pinCode')?.invalid && appointmentForm.get('pinCode')?.touched">
+        <span *ngIf="appointmentForm.get('pinCode')?.errors?.['required']">Pin Code is required.</span>
+    </div>
+
+    <label>Trainer Preference:</label><br>
+    <input type="radio" formControlName="trainerPreference" value="male"> Male Trainer<br>
+    <input type="radio" formControlName="trainerPreference" value="female"> Female Trainer<br>
+    <input type="radio" formControlName="trainerPreference" value="none"> No Preference<br>
+    <div *ngIf="appointmentForm.get('trainerPreference')?.invalid && appointmentForm.get('trainerPreference')?.touched">
+        <span>Trainer Preference is required.</span>
+    </div>
+
+    <label>Do you need a Physiotherapist?</label><br>
+    <input type="radio" formControlName="needPhysiotherapist" value="yes"> Yes<br>
+    <input type="radio" formControlName="needPhysiotherapist" value="no"> No<br>
+    <div *ngIf="appointmentForm.get('needPhysiotherapist')?.invalid && appointmentForm.get('needPhysiotherapist')?.touched">
+        <span>Selection is required.</span>
+    </div><label>Select a Package:</label><br>
+    <input type="radio" formControlName="package" value="500"> Rs. 500<br>
+    <input type="radio" formControlName="package" value="400"> Rs. 400<br>
+    <input type="radio" formControlName="package" value="300"> Rs. 300<br>
+    
+    <div *ngIf="isWeeksVisible()">
+        <label for="weeks">Weeks:</label>
+        <input type="number" formControlName="weeks">
+        <div *ngIf="appointmentForm.get('weeks')?.invalid && appointmentForm.get('weeks')?.touched">
+            <span *ngIf="appointmentForm.get('weeks')?.errors?.['required']">Weeks is required.</span>
+        </div>
+    </div>
+    
+    
+
+
+    <label for="amount">Amount:</label>
+    <input type="number" formControlName="amount" [disabled]="true">
+    <div *ngIf="appointmentForm.get('amount')?.invalid && appointmentForm.get('amount')?.touched">
+        <span *ngIf="appointmentForm.get('amount')?.errors?.['required']">Amount is required.</span>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+<app-footer-pg></app-footer-pg>

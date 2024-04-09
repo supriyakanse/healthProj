@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+  }
+  
+  .footer-section {
+    width: 30%;
+  }
+  
+  .footer-section h3 {
+    color: #333;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #000;
+  }
+  .copyright {
+    margin-top: 20px;
+    color: #666;
+  }
